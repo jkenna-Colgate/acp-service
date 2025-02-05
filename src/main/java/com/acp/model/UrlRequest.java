@@ -1,8 +1,10 @@
 package com.acp.model;
 
+import lombok.Data;
 
-public class Student {
-    private String id;
-    private String firstName;
-    private String lastName;
+@Data
+public class UrlRequest {
+    private String externalBaseUrl;
+    private String parameters;
 }
+

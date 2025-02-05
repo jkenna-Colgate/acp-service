@@ -1,4 +1,4 @@
-package com.acp.acpservice;
+package com.acp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AcpServiceApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(AcpServiceApplication.class, args);
     }
 
