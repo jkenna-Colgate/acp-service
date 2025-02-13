@@ -72,9 +72,11 @@ public class ApiController {
             String url = request.getExternalBaseUrl() + request.getParameters();
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
             return ResponseEntity.status(response.getStatusCode()).body(response.getBody());
+
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid URL or request");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("External service unavailable or request failed.");
         }
     }
 }

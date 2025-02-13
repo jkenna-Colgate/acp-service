@@ -11,6 +11,9 @@ public class ValueManagerService {
     private final Map<String, String> keyValueStore = new HashMap<>();
 
     public String writeValue(String key, String value) {
+        if (key == null || key.isEmpty() || value == null || value.isEmpty()) {
+            return "Invalid input: Key and value cannot be empty";
+        }
         keyValueStore.put(key, value);
         return "Value stored successfully";
     }
